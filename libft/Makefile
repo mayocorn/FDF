@@ -6,11 +6,11 @@
 #    By: mayocorn <twitter@mayocornsuki>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/01/06 15:22:22 by stsunoda          #+#    #+#              #
-#    Updated: 2022/08/01 19:14:30 by mayocorn         ###   ########.fr        #
+#    Updated: 2022/08/04 10:02:34 by mayocorn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
-NAME = ../libft.a
+NAME = libft.a
 
 SRCS = ft_atoi.c ft_bzero.c ft_calloc.c ft_isalnum.c ft_isalpha.c \
 		ft_isascii.c ft_isdigit.c ft_isprint.c ft_itoa.c ft_memchr.c \
@@ -27,23 +27,19 @@ ifeq ($(MAKECMDGOALS), bonus)
 	SRCS += $(BONUS_SRCS)
 endif
 
-OBJDIR = ../obj/
+OBJDIR = ./obj/
 OBJS = $(addprefix $(OBJDIR), $(SRCS:%.c=%.o))
 DEPS = $(OBJS:%.o=%.d)
-INCLUDE = -I./include/
 
 CC = gcc
 CFLAG = -Wall -Wextra -Werror
 
 $(OBJDIR)%.o: %.c
 	@mkdir -p $(dir $@)
-	$(CC) $(CFLAG) $(INCLUDE) -MMD -MP -c $< -o $@
+	$(CC) $(CFLAG) -MMD -MP -c $< -o $@
 
 $(NAME): $(OBJS)
 	ar -rcs $@ $(OBJS)
-
-$(OBJDIR):
-	mkdir obj
 
 -include $(DEPS)
 
