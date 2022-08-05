@@ -1,20 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   exit_print_usage.c                                 :+:      :+:    :+:   */
+/*   print_usage.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mayocorn <twitter@mayocornsuki>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/30 13:00:14 by mayocorn          #+#    #+#             */
-/*   Updated: 2022/07/30 13:14:52 by mayocorn         ###   ########.fr       */
+/*   Created: 2022/08/05 16:40:23 by mayocorn          #+#    #+#             */
+/*   Updated: 2022/08/05 16:43:03 by mayocorn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "exit.h"
+#include "libft.h"
 
-void	exit_print_usage(void)
+void	print_usage(void)
 {
 	ft_putstr_fd("FDF : invalid arguments\n", STDERR_FILENO);
 	ft_putstr_fd("Usage : ./fdf <filename>\n", STDERR_FILENO);
-	exit(EXIT_FAILURE);
 }
