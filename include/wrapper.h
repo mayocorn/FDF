@@ -1,29 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   try_open.c                                         :+:      :+:    :+:   */
+/*   wrapper.h                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mayocorn <twitter@mayocornsuki>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/05 17:13:35 by mayocorn          #+#    #+#             */
-/*   Updated: 2022/08/05 18:07:18 by mayocorn         ###   ########.fr       */
+/*   Created: 2022/07/30 13:55:00 by mayocorn          #+#    #+#             */
+/*   Updated: 2022/08/05 18:07:32 by mayocorn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
-#include <stdlib.h>
+#ifndef WRAPPER_H
+# define WRAPPER_H
 
-int	try_open(const char *path, int oflag)
-{
-	int	fd;
+# include <stdlib.h>
 
-	fd = open(path, oflag);
-	if (fd == -1)
-	{
-		perror("FDF");
-		exit(EXIT_FAILURE);
-	}
-	return (fd);
-}
+void	*try_malloc(size_t size);
+int		try_open(const char *path, int oflag);
+
+#endif

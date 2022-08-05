@@ -1,29 +1,26 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   try_open.c                                         :+:      :+:    :+:   */
+/*   try_malloc.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mayocorn <twitter@mayocornsuki>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/08/05 17:13:35 by mayocorn          #+#    #+#             */
-/*   Updated: 2022/08/05 18:07:18 by mayocorn         ###   ########.fr       */
+/*   Created: 2022/07/30 13:53:23 by mayocorn          #+#    #+#             */
+/*   Updated: 2022/08/05 18:06:10 by mayocorn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <sys/types.h>
-#include <sys/stat.h>
-#include <fcntl.h>
 #include <stdlib.h>
 
-int	try_open(const char *path, int oflag)
+void	*try_malloc(size_t size)
 {
-	int	fd;
+	void	*res;
 
-	fd = open(path, oflag);
-	if (fd == -1)
+	res = malloc(size);
+	if (res == NULL)
 	{
 		perror("FDF");
 		exit(EXIT_FAILURE);
 	}
-	return (fd);
+	return (res);
 }
