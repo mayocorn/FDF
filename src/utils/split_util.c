@@ -1,25 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   utils.h                                            :+:      :+:    :+:   */
+/*   split_util.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: mayocorn <twitter@mayocornsuki>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/30 12:59:34 by mayocorn          #+#    #+#             */
-/*   Updated: 2022/08/06 17:41:56 by mayocorn         ###   ########.fr       */
+/*   Created: 2022/08/06 17:36:22 by mayocorn          #+#    #+#             */
+/*   Updated: 2022/08/06 17:42:41 by mayocorn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef UTILS_H
-# define UTILS_H
+#include <stdlib.h>
 
-void	exit_caused_by_invalid_arguments(void);
-void	exit_caused_by_invalid_map(void);
-void	exit_caused_by_system_error(void);
+size_t	count_split_size(const char **split)
+{
+	size_t	cnt;
 
-void	free_stack(void *ptr);
+	cnt = 0;
+	while (split[cnt] != NULL)
+		cnt++;
+	return (cnt);
+}
 
-size_t	count_split_size(const char **split);
-void	free_split_strings(char **split);
+void	free_split_strings(char **split)
+{
+	size_t	i;
 
-#endif
+	i = 0;
+	while (split[i] != NULL)
+	{
+		free(split[i]);
+		i++;
+	}
+	free(split);
+}
