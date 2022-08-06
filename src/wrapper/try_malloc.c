@@ -6,11 +6,12 @@
 /*   By: mayocorn <twitter@mayocornsuki>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 13:53:23 by mayocorn          #+#    #+#             */
-/*   Updated: 2022/08/05 18:06:10 by mayocorn         ###   ########.fr       */
+/*   Updated: 2022/08/06 16:44:22 by mayocorn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
+#include "utils.h"
 
 void	*try_malloc(size_t size)
 {
@@ -18,9 +19,6 @@ void	*try_malloc(size_t size)
 
 	res = malloc(size);
 	if (res == NULL)
-	{
-		perror("FDF");
-		exit(EXIT_FAILURE);
-	}
+		exit_caused_by_system_error();
 	return (res);
 }

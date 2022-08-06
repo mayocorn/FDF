@@ -6,7 +6,7 @@
 /*   By: mayocorn <twitter@mayocornsuki>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/05 17:13:35 by mayocorn          #+#    #+#             */
-/*   Updated: 2022/08/05 18:07:18 by mayocorn         ###   ########.fr       */
+/*   Updated: 2022/08/06 16:43:50 by mayocorn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,6 +14,7 @@
 #include <sys/stat.h>
 #include <fcntl.h>
 #include <stdlib.h>
+#include "utils.h"
 
 int	try_open(const char *path, int oflag)
 {
@@ -21,9 +22,6 @@ int	try_open(const char *path, int oflag)
 
 	fd = open(path, oflag);
 	if (fd == -1)
-	{
-		perror("FDF");
-		exit(EXIT_FAILURE);
-	}
+		exit_caused_by_system_error();
 	return (fd);
 }
