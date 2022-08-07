@@ -6,7 +6,7 @@
 /*   By: mayocorn <twitter@mayocornsuki>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 15:35:31 by mayocorn          #+#    #+#             */
-/*   Updated: 2022/08/06 16:56:39 by mayocorn         ###   ########.fr       */
+/*   Updated: 2022/08/07 18:18:47 by mayocorn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,11 +14,11 @@
 #include <limits.h>
 #include "libft.h"
 
-static long long	try_strtoll_pos(char *str, int base);
-static long long	try_strtoll_neg(char *str, int base);
-static int			try_char_to_int(char c);
+static long long	try_strtoll_pos(const char *str, int base);
+static long long	try_strtoll_neg(const char *str, int base);
+static int			try_char_to_int(const char c);
 
-long long	try_strtoll(char *str, int base)
+long long	try_strtoll(const char *str, int base)
 {
 	if (*str == '-')
 		return (try_strtoll_neg(str + 1, base));
@@ -26,7 +26,7 @@ long long	try_strtoll(char *str, int base)
 		return (try_strtoll_pos(str, base));
 }
 
-static long long	try_strtoll_pos(char *str, int base)
+static long long	try_strtoll_pos(const char *str, int base)
 {
 	long long	res;
 	int			add;
@@ -49,7 +49,7 @@ static long long	try_strtoll_pos(char *str, int base)
 	return (res);
 }
 
-static long long	try_strtoll_neg(char *str, int base)
+static long long	try_strtoll_neg(const char *str, int base)
 {
 	long long	res;
 	int			add;
@@ -74,7 +74,7 @@ static long long	try_strtoll_neg(char *str, int base)
 	return (res);
 }
 
-static int	try_char_to_int(char c)
+static int	try_char_to_int(const char c)
 {
 	if (ft_isdigit(c))
 		return (c - '0');
