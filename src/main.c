@@ -6,13 +6,14 @@
 /*   By: mayocorn <twitter@mayocornsuki>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 13:17:50 by mayocorn          #+#    #+#             */
-/*   Updated: 2022/08/07 18:11:04 by mayocorn         ###   ########.fr       */
+/*   Updated: 2022/08/07 18:12:59 by mayocorn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include "utils.h"
 #include "fdf.h"
+#include "map.h"
 
 static void	validate_argc(int argc);
 static void	init_fdf(t_fdf_info *fdf_info, char *inputfile);
