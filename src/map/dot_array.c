@@ -6,13 +6,14 @@
 /*   By: mayocorn <twitter@mayocornsuki>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 16:52:02 by mayocorn          #+#    #+#             */
-/*   Updated: 2022/08/07 16:53:38 by mayocorn         ###   ########.fr       */
+/*   Updated: 2022/08/07 18:14:32 by mayocorn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "fdf.h"
 #include "map.h"
+#include "utils.h"
 #include "wrapper.h"
 
 t_dot	**create_dot_array(const char **split, size_t col)
