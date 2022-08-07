@@ -6,7 +6,7 @@
 /*   By: mayocorn <twitter@mayocornsuki>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 13:24:28 by mayocorn          #+#    #+#             */
-/*   Updated: 2022/08/07 17:48:53 by mayocorn         ###   ########.fr       */
+/*   Updated: 2022/08/07 18:23:09 by mayocorn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ static t_map	*create_map_from_list(t_list *list);
 void	read_map(t_fdf_info *fdf_info, char *inputfile)
 {
 	int		fd;
-	char	line_string;
+	char	*line_string;
 	t_list	*list_head;
 	size_t	cnt;
 
