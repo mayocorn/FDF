@@ -6,7 +6,7 @@
 /*   By: mayocorn <twitter@mayocornsuki>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 13:17:50 by mayocorn          #+#    #+#             */
-/*   Updated: 2022/08/07 17:55:18 by mayocorn         ###   ########.fr       */
+/*   Updated: 2022/08/07 18:11:04 by mayocorn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 #include "utils.h"
 #include "fdf.h"
 
-// static void	validate_argc(int argc);
-// static void	init_fdf(t_fdf_info *fdf_info, char *inputfile);
+static void	validate_argc(int argc);
+static void	init_fdf(t_fdf_info *fdf_info, char *inputfile);
 
 int	main(int argc, char **argv)
 {
