@@ -6,12 +6,13 @@
 /*   By: mayocorn <twitter@mayocornsuki>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 17:09:30 by mayocorn          #+#    #+#             */
-/*   Updated: 2022/08/07 17:30:38 by mayocorn         ###   ########.fr       */
+/*   Updated: 2022/08/07 18:25:28 by mayocorn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 #include "fdf.h"
+#include "map.h"
 #include "utils.h"
 
 t_list	*create_dots_line_node(const char *line, size_t col)
