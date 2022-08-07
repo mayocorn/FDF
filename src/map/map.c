@@ -6,7 +6,7 @@
 /*   By: mayocorn <twitter@mayocornsuki>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 13:24:28 by mayocorn          #+#    #+#             */
-/*   Updated: 2022/08/07 18:23:09 by mayocorn         ###   ########.fr       */
+/*   Updated: 2022/08/07 18:24:21 by mayocorn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -66,7 +66,7 @@ static t_map	*create_map_from_list(t_list *list)
 	map->height = ft_lstsize(list);
 	map->dots = (t_dot ***)try_malloc(map->height * sizeof(t_dot **));
 	i = 0;
-	while (i < map->height)
+	while (list != NULL)
 	{
 		(map->dots)[i] = list->content;
 		i++;
