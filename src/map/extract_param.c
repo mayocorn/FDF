@@ -6,7 +6,7 @@
 /*   By: mayocorn <twitter@mayocornsuki>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 17:16:39 by mayocorn          #+#    #+#             */
-/*   Updated: 2022/08/06 18:05:44 by mayocorn         ###   ########.fr       */
+/*   Updated: 2022/08/07 18:16:42 by mayocorn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,7 +14,7 @@
 #include "utils.h"
 #include "wrapper.h"
 
-long long	extract_altitude(char *str)
+long long	extract_altitude(const char *str)
 {
 	long long	res;
 	size_t		cnt;
@@ -33,7 +33,7 @@ long long	extract_altitude(char *str)
 	return (res);
 }
 
-int	extract_color(char *str)
+int	extract_color(const char *str)
 {
 	while (*str && *str != ',')
 		str++;
