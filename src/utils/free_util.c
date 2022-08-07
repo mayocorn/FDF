@@ -6,11 +6,11 @@
 /*   By: mayocorn <twitter@mayocornsuki>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 17:39:23 by mayocorn          #+#    #+#             */
-/*   Updated: 2022/08/06 17:41:00 by mayocorn         ###   ########.fr       */
+/*   Updated: 2022/08/07 17:43:53 by mayocorn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-void	free_stack(void *ptr)
+void	not_free(void *ptr)
 {
 	(void)ptr;
 }
