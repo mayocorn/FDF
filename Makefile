@@ -6,25 +6,25 @@
 #    By: mayocorn <twitter@mayocornsuki>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/01 18:39:02 by mayocorn          #+#    #+#              #
-#    Updated: 2022/08/07 18:02:45 by mayocorn         ###   ########.fr        #
+#    Updated: 2022/08/07 18:09:52 by mayocorn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
 NAME         = myfdf
 
 SRCDIR       = ./src/
-SRCS         = main.c
-               get_next_line/get_next_line.c
-               get_next_line/get_next_line_utils.c
-               map/dot_array.c
-               map/extract_param.c
-               map/map.c
-               map/map_with_list.c
-               utils/exit_util.c
-               utils/free_util.c
-               utils/split_util.c
-               wrapper/try_malloc.c
-               wrapper/try_open.c
+SRCS         = main.c \
+               get_next_line/get_next_line.c \
+               get_next_line/get_next_line_utils.c \
+               map/dot_array.c \
+               map/extract_param.c \
+               map/map.c \
+               map/map_with_list.c \
+               utils/exit_util.c \
+               utils/free_util.c \
+               utils/split_util.c \
+               wrapper/try_malloc.c \
+               wrapper/try_open.c \
                wrapper/try_strtoll.c
 
 OBJDIR       = ./obj/
