@@ -6,7 +6,7 @@
 /*   By: mayocorn <twitter@mayocornsuki>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 15:35:31 by mayocorn          #+#    #+#             */
-/*   Updated: 2022/08/07 18:18:47 by mayocorn         ###   ########.fr       */
+/*   Updated: 2022/08/08 17:46:26 by mayocorn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -76,12 +76,15 @@ static long long	try_strtoll_neg(const char *str, int base)
 
 static int	try_char_to_int(const char c)
 {
+	int	res;
+
 	if (ft_isdigit(c))
-		return (c - '0');
+		res = c - '0';
 	else if ('a' <= c && c <= 'z')
-		return (c - 'a' + 10);
+		res = c - 'a' + 10;
 	else if ('A' <= c && c <= 'Z')
-		return (c - 'A' + 10);
+		res = c - 'A' + 10;
 	else
 		exit_caused_by_invalid_map();
+	return (res);
 }
