@@ -6,7 +6,7 @@
 /*   By: mayocorn <twitter@mayocornsuki>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 13:17:50 by mayocorn          #+#    #+#             */
-/*   Updated: 2022/08/08 17:56:30 by mayocorn         ###   ########.fr       */
+/*   Updated: 2022/08/08 19:24:04 by mayocorn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@
 
 static void	validate_argc(int argc);
 static void	init_fdf(t_fdf_info *fdf_info, char *inputfile);
+// static void	execute_fdf(t_fdf_info *fdf_info);
 
 int	main(int argc, char **argv)
 {
@@ -25,11 +26,10 @@ int	main(int argc, char **argv)
 	validate_argc(argc);
 	init_fdf(&fdf_info, argv[1]);
 	// execute_fdf(&fdf_info);
-	// terminate_fdf(&fdf_info);
 	return (0);
 }
 
-static void validate_argc(int argc)
+static void	validate_argc(int argc)
 {
 	if (argc != 2)
 		exit_caused_by_invalid_arguments();
@@ -38,24 +38,11 @@ static void validate_argc(int argc)
 static void	init_fdf(t_fdf_info *fdf_info, char *inputfile)
 {
 	read_map(fdf_info, inputfile);
-	// init_minilibx(fdf_info);
-	// fd = open(argv[1], O_RDONLY);
-	// if (fd == -1)
-	// 	exit_perror();
-	// dots = read_map(fd);
-	// mlx = mlx_init();
-	// if (mlx == NULL)
-	// 	exit_print_message("FDF : minilibx error\n");
-	// window = mlx_new_window(mlx, 1920, 1080, "FdF");
-	// if (window == NULL)
-	// 	exit_print_message("FDF : window error\n");
-	// mlx_loop(mlx);
+	fdf_info->mlx = try_mlx_init();
+	fdf_info->window = mlx_new_window(fdf_info->mlx, 500, 500, "FDF");
 }
 
-// static void	execute_fdf()
+// static void	execute_fdf(t_fdf_info *fdf_info)
 // {
-// }
 
-// static void	terminate_fdf()
-// {
 // }
