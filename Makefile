@@ -6,7 +6,7 @@
 #    By: mayocorn <twitter@mayocornsuki>            +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2022/08/01 18:39:02 by mayocorn          #+#    #+#              #
-#    Updated: 2022/08/07 18:09:52 by mayocorn         ###   ########.fr        #
+#    Updated: 2022/08/08 19:04:26 by mayocorn         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -24,6 +24,7 @@ SRCS         = main.c \
                utils/free_util.c \
                utils/split_util.c \
                wrapper/try_malloc.c \
+			   wrapper/try_mlx_init.c \
                wrapper/try_open.c \
                wrapper/try_strtoll.c
 
