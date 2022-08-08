@@ -6,7 +6,7 @@
 /*   By: mayocorn <twitter@mayocornsuki>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 13:17:50 by mayocorn          #+#    #+#             */
-/*   Updated: 2022/08/07 18:12:59 by mayocorn         ###   ########.fr       */
+/*   Updated: 2022/08/08 17:56:30 by mayocorn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ int	main(int argc, char **argv)
 	t_fdf_info	fdf_info;
 
 	validate_argc(argc);
-	init_fdf(&fdf_info, argv[2]);
+	init_fdf(&fdf_info, argv[1]);
 	// execute_fdf(&fdf_info);
 	// terminate_fdf(&fdf_info);
 	return (0);
