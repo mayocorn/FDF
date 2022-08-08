@@ -6,7 +6,7 @@
 /*   By: mayocorn <twitter@mayocornsuki>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 12:59:34 by mayocorn          #+#    #+#             */
-/*   Updated: 2022/08/07 17:44:02 by mayocorn         ###   ########.fr       */
+/*   Updated: 2022/08/08 18:51:43 by mayocorn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 void	exit_caused_by_invalid_arguments(void);
 void	exit_caused_by_invalid_map(void);
+void	exit_caused_by_mlx(void);
 void	exit_caused_by_system_error(void);
 
 void	not_free(void *ptr);

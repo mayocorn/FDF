@@ -6,7 +6,7 @@
 /*   By: mayocorn <twitter@mayocornsuki>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 16:33:40 by mayocorn          #+#    #+#             */
-/*   Updated: 2022/08/06 17:42:25 by mayocorn         ###   ########.fr       */
+/*   Updated: 2022/08/08 18:51:15 by mayocorn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,6 +25,12 @@ void	exit_caused_by_invalid_map(void)
 {
 	ft_putstr_fd("FDF : invalid map\n", STDERR_FILENO);
 	ft_putstr_fd("map format : <altitude>, <color> ...\n", STDERR_FILENO);
+	exit(EXIT_FAILURE);
+}
+
+void	exit_caused_by_mlx(void)
+{
+	ft_putstr_fd("FDF : mlx error\n", STDERR_FILENO);
 	exit(EXIT_FAILURE);
 }
 
