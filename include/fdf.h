@@ -6,12 +6,14 @@
 /*   By: mayocorn <twitter@mayocornsuki>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/07 17:53:24 by mayocorn          #+#    #+#             */
-/*   Updated: 2022/08/07 17:53:42 by mayocorn         ###   ########.fr       */
+/*   Updated: 2022/08/08 18:45:10 by mayocorn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #ifndef FDF_H
 # define FDF_H
+
+# include "mlx.h"
 
 typedef struct s_dot
 {
