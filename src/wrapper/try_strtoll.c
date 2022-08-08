@@ -6,13 +6,14 @@
 /*   By: mayocorn <twitter@mayocornsuki>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/06 15:35:31 by mayocorn          #+#    #+#             */
-/*   Updated: 2022/08/08 17:46:26 by mayocorn         ###   ########.fr       */
+/*   Updated: 2022/08/08 17:48:20 by mayocorn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdlib.h>
 #include <limits.h>
 #include "libft.h"
+#include "utils.h"
 
 static long long	try_strtoll_pos(const char *str, int base);
 static long long	try_strtoll_neg(const char *str, int base);
