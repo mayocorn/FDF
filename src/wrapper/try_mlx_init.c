@@ -6,11 +6,12 @@
 /*   By: mayocorn <twitter@mayocornsuki>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/08 18:53:57 by mayocorn          #+#    #+#             */
-/*   Updated: 2022/08/08 18:58:13 by mayocorn         ###   ########.fr       */
+/*   Updated: 2022/08/08 19:05:23 by mayocorn         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "mlx.h"
+#include "stdlib.h"
 #include "utils.h"
 
 void	*try_mlx_init(void)
